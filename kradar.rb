@@ -5,21 +5,21 @@
 class Kradar < Formula
   desc "Interactive Kubernetes TUI for Helm releases and image tracking"
   homepage "https://github.com/sakvarelidze/kradar"
-  version "0.1.1"
+  version "0.0.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/sakvarelidze/kradar/releases/download/v0.1.1/kradar_0.1.1_darwin_amd64.tar.gz"
-      sha256 "1159de3aa9fe0000245dd0c6842b8823acf4b950d12ad61032354c9fa2e61c02"
+      url "https://github.com/sakvarelidze/kradar/releases/download/v0.0.1/kradar_0.0.1_darwin_amd64.tar.gz"
+      sha256 "7d69c524d970b7f2b79688cd6553ec839be5c9cff491df25a164bdcf52b46906"
 
       define_method(:install) do
         bin.install "kradar"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/sakvarelidze/kradar/releases/download/v0.1.1/kradar_0.1.1_darwin_arm64.tar.gz"
-      sha256 "2748587f4fe5ad7119cc5158b85c96e3cbf4721e7108668131a8afde77f5375a"
+      url "https://github.com/sakvarelidze/kradar/releases/download/v0.0.1/kradar_0.0.1_darwin_arm64.tar.gz"
+      sha256 "9d126da700e013aa5a4bbf82eea84cad57a6864ab526d7051f88d8052cc592b9"
 
       define_method(:install) do
         bin.install "kradar"
@@ -29,15 +29,15 @@ class Kradar < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sakvarelidze/kradar/releases/download/v0.1.1/kradar_0.1.1_linux_amd64.tar.gz"
-      sha256 "649f86fe21565d9ad3fe721ee6da7270882ae897ddb92fec89112d966e27e70c"
+      url "https://github.com/sakvarelidze/kradar/releases/download/v0.0.1/kradar_0.0.1_linux_amd64.tar.gz"
+      sha256 "649333ed29207e10aaad470d7b34b121318e990bdf6c1adaa9c8a2183bd457ed"
       define_method(:install) do
         bin.install "kradar"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sakvarelidze/kradar/releases/download/v0.1.1/kradar_0.1.1_linux_arm64.tar.gz"
-      sha256 "211d27a5b644851118eb6d370390f1437c4ef31c5fa485bbf63262befa838ec4"
+      url "https://github.com/sakvarelidze/kradar/releases/download/v0.0.1/kradar_0.0.1_linux_arm64.tar.gz"
+      sha256 "007509799dc709efb9618251a7516673197fe20f9d1ed3f98c82e8e2fcdae37a"
       define_method(:install) do
         bin.install "kradar"
       end
